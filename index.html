@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- <div id="loader" class=" w-full h-full absolute bg-[#F3C77C] flex items-center justify-center">
+  <div id="loader" class="fixed inset-0 z-[999] bg-[#F3C77C] flex items-center justify-center">
     <div class="relative w-80 h-80">
       <img class="loaderImg opacity-0 absolute top-0 left-0 w-full h-full z-10"
         src="https://wethinkelastic.com/assets/images/152c223f4359675788470.svg" alt="">
@@ -34,10 +34,10 @@
       <img class="loaderImg opacity-0 absolute top-0 left-0 w-full h-full z-20"
         src="https://wethinkelastic.com/assets/images/11d1acd8abd7b1efc4c23d.svg" alt="">
     </div>
-  </div> -->
-  <div id="main" class="w-full h-full bg-[#000000] relative ">
+  </div>
+  <div id="main" class="w-full min-h-screen relative bg-[#151414]">
     <div id="nav" class="p-6 flex items-center justify-between">
-      <div id="navpart1" class="p-2">
+      <div id="navpart1" class=" text-[#f2e2c2] text-3xl">
         <svg xmlns="http://www.w3.org/2000/svg" width="63.021" height="63.021" viewBox="0 0 63.021 63.021">
           <g id="Group_1108" data-name="Group 1108" transform="translate(-211 -79)">
             <path id="Path_579" data-name="Path 579"
@@ -55,23 +55,39 @@
           </g>
         </svg>
       </div>
-      <div id="navpart2" class="flex gap-20 space-x-8 text-[#e7cfb1] text-xl font-[400] font-[font2]">
-        <h2>Projects</h2>
-        <h2>Expertise</h2>
-        <h2>The team</h2>
-        <h2>Contact</h2>
+      <div id="navpart2" class="flex gap-20 text-[#e7cfb1] font-[font2] text-xl">
+        <h2 class="cursor-pointer hover:text-[#e5813e]">Projects</h2>
+        <h2 class="cursor-pointer hover:text-[#e5813e]">Expertise</h2>
+        <h2 class="cursor-pointer hover:text-[#e5813e]">The team</h2>
+        <h2 class="cursor-pointer hover:text-[#e5813e]">Contact</h2>
       </div>
     </div>
-    <div id="page1" class="w-full h-full flex items-center justify-center">
-      <div id="mainhero" class="text-[#f3c77c] flex items-center text-[40rem] font-[hello]">
-        <h1>h</h1>
-        <h1>e</h1>
-        <h1>l</h1>
-        <h1>l</h1>
-        <h1>o</h1>
+    <div id="page1" class="w-full h-full">
+      <div id="page1hero"
+        class="w-full h-130 flex items-center justify-center overflow-hidden text-[#f3c77c] text-[39rem] font-semibold gap-[10px] font-[hello]">
+        <span class="hello">h</span>
+        <span class="hello">e</span>
+        <span class="hello">l</span>
+        <span class="hello">l</span>
+        <span class="hello">o</span>
       </div>
+      <div id="page1bottom"
+        class="w-full h-70 text-[#f3c77c] text-[2.2rem] flex flex-col items-center justify-center leading-none font-[font2]">
+        <h1>WE ARE THE TEAM</h1>
+        <h1>WE THINK ELASTIC</h1>
+      </div>
+
     </div>
+    <div id="page2" class="w-full h-full">
+      <video id="video" autoplay muted loop class="scale-30" src="/public/video-start (1).mp4">
+      </video>
+    </div>
+    <div id="page3" class="w-[90vw] h-[100vw]">
+      <h1 class="w-full h-full">ashdgasdh</h1>
+</div>
   </div>
+
+
   <script type="module" src="/src/main.js"></script>
 </body>
 
