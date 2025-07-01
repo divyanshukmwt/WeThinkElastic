@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import "./style.css";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import 'remixicon/fonts/remixicon.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +35,7 @@ function loader() {
 ease: "sine.out",
 }, "-=0.5")
 }
-loader();
+// loader();
 gsap.to("#video", {
   scale:1,
   scrollTrigger: {
@@ -45,3 +46,10 @@ gsap.to("#video", {
     scrub: 1,
   }
 });
+gsap.to(".page3text",{
+  translateY:0,
+  scrollTrigger:"#page3text",
+  stagger:0.2,
+  duration:0.9,
+  ease:"power1.Out"
+})
