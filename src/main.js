@@ -63,7 +63,7 @@ gsap.to("#page7 h1", {
   scrollTrigger: {
     trigger: "#page7",
     start: "top -15%",
-    end: "+=250%",
+    end: "+=200%",
     scrub: 1,
     pin: true,
   }

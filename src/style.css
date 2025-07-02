@@ -17,6 +17,10 @@ body{
   background:#eed0a17b ;
 }
 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 @font-face {
   font-family: font1;
   src: url(/public/Poppins-Regular.ttf);
