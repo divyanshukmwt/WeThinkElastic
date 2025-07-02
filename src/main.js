@@ -29,9 +29,9 @@ function loader() {
     display: "none"
   });
   tl.from(".hello", {
-    height :0,
-    duration:0.4,
-    stagger : 0.2,
+    translateY:1,
+    duration:0.8,
+    stagger : 0.1,
 ease: "sine.out",
 }, "-=0.5")
 }
@@ -59,7 +59,7 @@ ScrollTrigger.defaults({
 });
 
 gsap.to("#page7 h1", {
-  transform: "translate(-150%)",
+  transform: "translate(-155%)",
   scrollTrigger: {
     trigger: "#page7",
     start: "top -15%",
