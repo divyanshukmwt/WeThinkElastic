@@ -53,3 +53,25 @@ gsap.to(".page3text",{
   duration:0.9,
   ease:"power1.Out"
 })
+// gsap.to("#page7 h1", {
+//   x: "-65%",
+//   scrollTrigger: {
+//     trigger: "#page7",
+//     scroller: "body",
+//     start: "top 0%",
+//     end: "+=100%",
+//     scrub: 2,
+//     pin: true,
+//     pinSpacing: false,
+//   },
+// });
+gsap.to(".page10text h2", {
+  translateY:0,
+  scrollTrigger:{
+    trigger:"#page10",
+    scroller:"body",
+    start:"top 50%",
+    end:"top 25%",
+    scrub:2,
+  }
+})
