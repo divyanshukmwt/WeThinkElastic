@@ -31,7 +31,7 @@ function loader() {
   tl.from(".hello", {
     height :0,
     duration:0.4,
-    stagger : 0.03,
+    stagger : 0.2,
 ease: "sine.out",
 }, "-=0.5")
 }
@@ -53,13 +53,13 @@ gsap.to(".page3text",{
   duration:0.9,
   ease:"power1.Out"
 })
-// Enable smooth pinning transition
+
 ScrollTrigger.defaults({
   anticipatePin: 1
 });
 
 gsap.to("#page7 h1", {
-  transform: "translate(-165%)",
+  transform: "translate(-100%)",
   scrollTrigger: {
     trigger: "#page7",
     start: "top -15%",
