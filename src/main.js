@@ -59,7 +59,7 @@ ScrollTrigger.defaults({
 });
 
 gsap.to("#page7 h1", {
-  transform: "translate(-100%)",
+  transform: "translate(-150%)",
   scrollTrigger: {
     trigger: "#page7",
     start: "top -15%",
