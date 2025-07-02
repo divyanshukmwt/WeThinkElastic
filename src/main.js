@@ -35,7 +35,7 @@ function loader() {
 ease: "sine.out",
 }, "-=0.5")
 }
-// loader();
+loader();
 gsap.to("#video", {
   scale:1,
   scrollTrigger: {
@@ -53,18 +53,22 @@ gsap.to(".page3text",{
   duration:0.9,
   ease:"power1.Out"
 })
-// gsap.to("#page7 h1", {
-//   x: "-65%",
-//   scrollTrigger: {
-//     trigger: "#page7",
-//     scroller: "body",
-//     start: "top 0%",
-//     end: "+=100%",
-//     scrub: 2,
-//     pin: true,
-//     pinSpacing: false,
-//   },
-// });
+// Enable smooth pinning transition
+ScrollTrigger.defaults({
+  anticipatePin: 1
+});
+
+gsap.to("#page7 h1", {
+  transform: "translate(-165%)",
+  scrollTrigger: {
+    trigger: "#page7",
+    start: "top -15%",
+    end: "+=250%",
+    scrub: 1,
+    pin: true,
+  }
+});
+
 gsap.to(".page10text h2", {
   translateY:0,
   scrollTrigger:{
@@ -75,3 +79,53 @@ gsap.to(".page10text h2", {
     scrub:2,
   }
 })
+const cursorDivs = document.querySelectorAll('.cursordiv');
+
+cursorDivs.forEach(div => {
+  const cursor = div.querySelector('.cursor');
+
+  cursor.classList.add('hidden');
+
+  div.addEventListener('mouseenter', () => {
+    cursor.classList.remove('hidden');
+  });
+
+  div.addEventListener('mouseleave', () => {
+    cursor.classList.add('hidden');
+  });
+
+  div.addEventListener('mousemove', (e) => {
+    const rect = div.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const offsetX = 25;
+    const offsetY = 25;
+
+    cursor.style.left = `${x - offsetX}px`;
+    cursor.style.top = `${y - offsetY}px`;
+  });
+});
+gsap.to(".page4Svg2",{
+  rotate:360,
+  repeat:-1,
+  duration:10,
+  ease:"none",
+})
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', function () {
+  const navBar = document.getElementById('nav');
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+
+    navBar.style.transform = 'translateY(-100%)';
+  } else {
+    navBar.style.transform = 'translateY(0)';
+  }
+
+  lastScrollY = currentScrollY;
+});
+

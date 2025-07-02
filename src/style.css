@@ -11,6 +11,12 @@ html {
 body{
   overflow-x: hidden;
 }
+
+::selection{
+  color: #f3c77c;
+  background:#eed0a17b ;
+}
+
 @font-face {
   font-family: font1;
   src: url(/public/Poppins-Regular.ttf);
