@@ -58,16 +58,16 @@ ScrollTrigger.defaults({
   anticipatePin: 1
 });
 
-gsap.to("#page7 h1", {
-  transform: "translate(-155%)",
-  scrollTrigger: {
-    trigger: "#page7",
-    start: "top -15%",
-    end: "+=200%",
-    scrub: 1,
-    pin: true,
-  }
-});
+// gsap.to("#page7 h1", {
+//   transform: "translate(-155%)",
+//   scrollTrigger: {
+//     trigger: "#page7",
+//     start: "top -15%",
+//     end: "+=200%",
+//     scrub: 1,
+//     pin: true,
+//   }
+// });
 
 gsap.to(".page10text h2", {
   translateY:0,
