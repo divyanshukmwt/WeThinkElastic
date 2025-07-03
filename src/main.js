@@ -35,7 +35,7 @@ function loader() {
 ease: "sine.out",
 }, "-=0.5")
 }
-loader();
+// loader();
 gsap.to("#video", {
   scale:1,
   scrollTrigger: {
