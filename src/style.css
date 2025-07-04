@@ -9,9 +9,9 @@ html {
   height: 100%;
   overflow-x: hidden; 
 }
-/* body{
+body{
   overflow-x: hidden;
-} */
+}
 
 ::selection{
   color: #f3c77c;

@@ -29,13 +29,14 @@ function loader() {
     display: "none"
   });
   tl.from(".hello", {
-    translateY:1,
+    height:0,
     duration:0.8,
     stagger : 0.1,
 ease: "sine.out",
 }, "-=0.5")
 }
-// loader();
+loader();
+
 gsap.to("#video", {
   scale:1,
   scrollTrigger: {
@@ -50,24 +51,21 @@ gsap.to(".page3text",{
   translateY:0,
   scrollTrigger:"#page3text",
   stagger:0.2,
-  duration:0.9,
+  duration:0.6,
   ease:"power1.Out"
 })
 
-ScrollTrigger.defaults({
-  anticipatePin: 1
+gsap.to("#page7 h1", {
+  xPercent: -160, // smoother & better than "transform"
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#page7",
+    start: "top -10%",
+    end: "+=250%",
+    scrub: 1,
+    pin: true,
+  }
 });
-
-// gsap.to("#page7 h1", {
-//   transform: "translate(-155%)",
-//   scrollTrigger: {
-//     trigger: "#page7",
-//     start: "top -15%",
-//     end: "+=200%",
-//     scrub: 1,
-//     pin: true,
-//   }
-// });
 
 gsap.to(".page10text h2", {
   translateY:0,
@@ -75,7 +73,7 @@ gsap.to(".page10text h2", {
     trigger:"#page10",
     scroller:"body",
     start:"top 50%",
-    end:"top 25%",
+    end:"top 50%",
     scrub:2,
   }
 })
@@ -112,20 +110,18 @@ gsap.to(".page4Svg2",{
   duration:10,
   ease:"none",
 })
+window.addEventListener("wheel", (event) => {
+  if (event.deltaY > 0) {
+    gsap.to("#nav", {
+      y: "-100%",
+      duration: 0.1,
 
-let lastScrollY = window.scrollY;
-
-window.addEventListener('scroll', function () {
-  const navBar = document.getElementById('nav');
-  const currentScrollY = window.scrollY;
-
-  if (currentScrollY > lastScrollY) {
-
-    navBar.style.transform = 'translateY(-100%)';
+    });
   } else {
-    navBar.style.transform = 'translateY(0)';
+    gsap.to("#nav", {
+      y: "0%",
+      duration: 0.1,
+
+    });
   }
-
-  lastScrollY = currentScrollY;
 });
-
